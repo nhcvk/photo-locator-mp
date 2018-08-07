@@ -1,16 +1,18 @@
 <!--pages/add/add.wxml-->
 <view class="input">
-  <form class="card" bindsubmit="bindFormSubmit">
-    <view class="user-input card-header">
-      <view class="text-area-wrap">
-        <textarea placeholder="name" name="name" auto-height />
-        </view>
-      </view>
-      <view class="user-input card-content">
-        <view class="text-area-wrap">
-          <textarea style="input-size" placeholder="story" class="input-height" name="content" maxlength="-1" />
-        </view>
-      </view>
-      <button class="button" form-type="submit">Post Picture</button>
-     </form>
+  <view class="banner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('https://kitt.lewagon.com/placeholder/cities/berlin');">
+    <view class="banner-content">
+      <button bindtap="picture">Take Picture</button>
     </view>
+  </view>
+  <form class="card" bindsubmit="bindFormSubmit">
+    <view class="user-input card-content">
+      <view class="text-area-wrap">
+        <textarea style="input-size" placeholder="Description" class="input-height" name="Description" maxlength="-1" />
+      </view>
+    </view>
+    <button class="button" form-type="submit">Post Picture</button>
+  </form>
+</view>
+
+<button class="button" bindtap="goToIndex" form-type="submit">Back to index</button>
