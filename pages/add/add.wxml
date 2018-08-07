@@ -1,2 +1,16 @@
 <!--pages/add/add.wxml-->
-<text>pages/add/add.wxml</text>
+<view class="input">
+  <form class="card" bindsubmit="bindFormSubmit">
+    <view class="user-input card-header">
+      <view class="text-area-wrap">
+        <textarea placeholder="name" name="name" auto-height />
+        </view>
+      </view>
+      <view class="user-input card-content">
+        <view class="text-area-wrap">
+          <textarea style="input-size" placeholder="story" class="input-height" name="content" maxlength="-1" />
+        </view>
+      </view>
+      <button class="button" form-type="submit">Post Picture</button>
+     </form>
+    </view>
