@@ -1,1 +1,63 @@
 /**index.wxss**/
+.container {
+  display: flex;
+  flex-direction:column;
+  justify-content: space-between;
+  flex: 0 0 auto;
+}
+.tabs {
+  flex: 0 0 auto;
+  background: rgb(0, 0, 0);
+  display: flex;
+  justify-content: center;
+  padding: 10px 10px 0 10px;
+  flex-grow: 1;
+}
+.tabs a {
+  color: white;
+}
+.tabHeader {
+  font-size: 17px;
+  font-weight: lighter;
+  margin-top: 0;
+}
+.tabs p {
+  opacity: 0.5;
+  margin-bottom: 0;
+}
+.tab {
+  background: rgb(172, 171, 171);
+  flex: 0 0 33%;
+  text-align: center;
+  padding: 20px 0;
+}
+.tab:first-child {
+  border-radius: 10px 0 0 0;
+}
+.tab:last-child {
+  border-radius: 0 10px 0 0;
+}
+.tab.active {
+  background: white;
+  color: black;
+}
+.pictures {
+
+}
+.upload {
+  background: rgb(0, 0, 0);
+  display: flex;
+  justify-content: center;
+  padding: 10px 10px 10px 10px;
+  flex-grow: 1;
+}
+.btn-medium {
+  color: #999999;
+  border: 1px solid #999999;
+  background-color: white;
+  padding: 10px 15px;
+  border-radius: 50px;
+  font-weight: lighter;
+
+}
+

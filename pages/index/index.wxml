@@ -5,6 +5,30 @@
              <view>"{{photo.whatever info you need, check console)"
 </block> -->
 
+<div class="container">
 
+<!--TAB-->
+  <div class="tabs">
+    <a class="tab active" href="#">
+      <view class="tabHeader">FEED</view>
+    </a>
+    <a class="tab" href="#">
+      <view class="tabHeader">UPLOADS</view>
+    </a>
+    <a class="tab" href="#">
+      <view class="tabHeader">FAVOS</view>
+    </a>
+  </div>
+
+  <!--PICTURES FEED-->
+  <div class="pictures">
+  <view>PICTURES HERE</view>
+  </div>
+
+  <!--UPLOAD-->
+  <div class="upload">
+    <a href="#" class="btn-medium">UPLOAD PICTURE</a>
+  </div>
+</div>
 
 
