@@ -1,5 +1,4 @@
-/**index.wxss**/
-
+/* pages/uploads/uploads.wxss */
 /* TOP TABS */
 
 .tabs {
@@ -75,6 +74,3 @@
   border-radius: 50px;
   font-weight: lighter;
 }
-
-
-

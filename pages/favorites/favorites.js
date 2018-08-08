@@ -1,12 +1,12 @@
-//index.js
+// pages/favorites/favorites.js
 const app = getApp()
 const myRequest = require('../../lib/request');
 
 Page({
 
   data: {
-      items: []
-    },
+    items: []
+  },
 
   onLoad: function () {
     let page = this
@@ -14,7 +14,7 @@ Page({
       path: 'photos',
       success(res) {
         console.log(res)
-        page.setData({items: res.data.photos}) 
+        page.setData({ items: res.data.photos })
       }
     })
   },
@@ -29,17 +29,21 @@ Page({
     wx.reLaunch({
       url: '/pages/uploads/uploads'
     })
-},
+  },
 
-  goFavorites: function (e) {
+  goIndex: function (e) {
     wx.reLaunch({
-      url: '/pages/favorites/favorites'
+      url: '/pages/index/index'
     })
-},
+  },
 
   showImage: function (e) {
     wx.reLaunch({
       url: '/pages/photo/photo'
     })
   },
+
 })
+
+
+  

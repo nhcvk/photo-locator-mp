@@ -1,20 +1,23 @@
-//index.js
+// pages/uploads/uploads.js
 const app = getApp()
 const myRequest = require('../../lib/request');
 
 Page({
 
   data: {
-      items: []
-    },
+    items: []
+  },
 
   onLoad: function () {
     let page = this
     myRequest.get({
       path: 'photos',
+      data: {
+        user_id: app.globalData.userId
+      },
       success(res) {
         console.log(res)
-        page.setData({items: res.data.photos}) 
+        page.setData({ items: res.data.photos })
       }
     })
   },
@@ -25,21 +28,22 @@ Page({
     })
   },
 
-  goUploads: function (e) {
+  goIndex: function (e) {
     wx.reLaunch({
-      url: '/pages/uploads/uploads'
+      url: '/pages/index/index'
     })
-},
+  },
 
   goFavorites: function (e) {
     wx.reLaunch({
       url: '/pages/favorites/favorites'
     })
-},
+  },
 
   showImage: function (e) {
     wx.reLaunch({
       url: '/pages/photo/photo'
     })
   },
+
 })
