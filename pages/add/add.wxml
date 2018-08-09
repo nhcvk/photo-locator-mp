@@ -3,7 +3,7 @@
 <!--BACK TO INDEX-->
 <button class="button" bindtap="goIndex" form-type="submit">Back to index</button>
 
-<form bindsubmit="bindFormSubmit">
+<form bindsubmit="addPhoto">
 
 <!-- Public switch  -->
 <view class='public-container'>
@@ -37,21 +37,20 @@
 
 <!--DESCRIPTION INPUT-->
 <view class="input">
-  <form class="card" bindsubmit="bindFormSubmit">
+  <view  class="card">
     <view class="user-input card-content">
       <view class="text-area-wrap">
-        <textarea style="input-size" placeholder="Description" class="input-height" name="Description" maxlength="-1" />
+        <textarea style="input-size" placeholder="Description" class="input-height" name="description" maxlength="-1" />
       </view>
     </view>
-  </form>
+  </view>
 </view>
-<!--DESCRIPTION INPUT-->
-
+<view class="upload">
+  <button bindtap='myToast' class="btn-medium" form-type="submit">UPLOAD PICTURE</button>
+</view>
 </form>
 
 <!--UPLOAD-->
 
-<view class="upload">
-  <view class="btn-medium" bindtap="goAdd">UPLOAD PICTURE</view>
-</view>
+
 
