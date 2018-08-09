@@ -11,15 +11,14 @@
     </view>
 </view>
 </block>
-
-<text>pages/photo/photo.wxml</text>
             <view>{{description}}</view>
             <view>{{latitude}}</view>
-
+    <view>{{longitude}}</view>
 <map    show-location="{{showLocation}}"
         scale="{{sc}}"
-        latitude="{{lat}}"
-        longitude="{{long}}"
+        latitude="{{latitude}}"
+        longitude="{{longitude}}"
+        markers="{{markers}}"
 ></map>
 
 <!--UPLOAD-->
