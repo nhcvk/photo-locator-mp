@@ -5,7 +5,7 @@
 
 <form bindsubmit="bindFormSubmit">
 
-<!-- Public button  -->
+<!-- Public switch  -->
 <view class='public-container'>
   <view class='flex-public-item1'>
 </view>
@@ -18,7 +18,7 @@
     </view>
   </view>
 </view>
-<!-- Public button  -->
+<!-- Public switch  -->
 
 <!-- Contain pic after take picture  -->
 <view class='flex-container-image' wx:if="{{!haveImage}}">
@@ -27,33 +27,11 @@
 </view>
 
 <view class='flex-container-image' wx:if="{{is_sending || haveImage}}">
-      
       <view class='flex-container-image'>
-       <!-- sending  -->
-       <view class='image-center' >
+        <view class='image-center' >
           <image wx:if="{{!haveImage}}" class="image-sending" src="{{imageSrc}}"></image>
-      </view>
-
-          <view class="container"  wx:if="{{!haveImage}}">
-            <view class="box">
-                <view class="border one"></view>
-                <view class="border two"></view>
-                <view class="border three"></view>
-                <view class="border four"></view>
-
-                <view class="line one"></view>
-                <view class="line two"></view>
-                <view class="line three"></view>
-            </view>
-          </view>
-          <!--sending  -->
-
-          <!--finish sending  -->
-            <view class='flex-item-image' wx:if="{{haveImage}}" style="background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('{{imageUrl}}')">
         </view>
-          <!--finish sending  -->
       </view>
-
 </view>
 <!-- Contain pic after take picture  -->
 
