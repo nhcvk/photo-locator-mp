@@ -24,7 +24,7 @@
 <view class="card">
     <view class="flex-wrp">
       <!-- BODY PART  -->
-      <image src="{{photo.image_url}}" class="flex-item-pic " style="linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('{{photo.image_url}}')" bindtap="changeToPhoto"></image>
+      <button id="{{index}}" bindtap="changeToPhoto"><image src="{{photo.image_url}}" class="flex-item-pic " style="linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('{{photo.image_url}}')"></image></button>
       <!-- BODY PART  -->
     </view>
 </view>
