@@ -1,45 +1,9 @@
+// pages/testing/testing.js
 // pages/add/add.js
 const app = getApp()
 const myRequest = require('../../lib/request');
 
 Page({
-
-  goIndex: function (e) {
-    wx.reLaunch({
-      url: '/pages/index/index'
-    })
-  },
-
-  switch1Change: function (e) {
-    console.log('switch1 has experienced a change event, the value brought is', e.detail.value)
-    this.data.is_public = e.detail.value
-    console.log(this.data.is_public)
-  },
-
-  goBack: function (e) {
-    wx.navigateBack({
-      delta: 1
-    })
-  },
-
-  onLoad: function(options) {
-    var that = this
-    console.log(app.globalData.userInfo)
-
-    // ###Set userInfo to local data
-    if (app.globalData.userInfo != null) {
-      that.setData({
-        userInfo: app.globalData.userInfo
-      })
-    } else {
-      app.getUserInfo()
-    }
-  },
-  goBack: function (e) {
-    wx.navigateBack({
-      delta: 1
-    })
-  },
 
   onShow: function () {
     var that = this
@@ -91,6 +55,28 @@ Page({
       })
     }
   },
-  
-  
+
+  goIndex: function (e) {
+    wx.reLaunch({
+      url: '/pages/index/index'
+    })
+  },
 })
+
+//   picture: function(e) {
+//     wx.chooseImage({
+//       count: 1,
+//       sizeType: ['original', 'compressed'], 
+//       sourceType: ['album', 'camera'], 
+//       success: function (res) {
+//         var tempFilePaths = res.tempFilePaths
+//       },
+//     })
+//   },
+
+//   goToIndex: function () {
+//     wx.reLaunch({
+//       url: '../index/index'
+//     })
+//   },
+// })

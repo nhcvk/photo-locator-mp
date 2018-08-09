@@ -1,18 +1,57 @@
 <!--pages/add/add.wxml-->
-<view class="input">
-  <view class="banner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('https://kitt.lewagon.com/placeholder/cities/berlin');">
-    <view class="banner-content">
-      <button bindtap="picture">Take Picture</button>
+
+<!--BACK TO INDEX-->
+<button class="button" bindtap="goIndex" form-type="submit">Back to index</button>
+
+<form bindsubmit="bindFormSubmit">
+
+<!-- Public switch  -->
+<view class='public-container'>
+  <view class='flex-public-item1'>
+</view>
+<view class='flex-public-item2'>
+  <view class="public-text">Location sharing</view>
+</view>
+<view class='flex-public-item3'>
+  <view class='change-scale'>
+    <switch checked bindchange="switch1Change"/>
     </view>
   </view>
+</view>
+<!-- Public switch  -->
+
+<!-- Contain pic after take picture  -->
+<view class='flex-container-image' wx:if="{{!haveImage}}">
+  <view class="flex-item-photo">            
+  </view>
+</view>
+
+<view class='flex-container-image' wx:if="{{is_sending || haveImage}}">
+      <view class='flex-container-image'>
+        <view class='image-center' >
+          <image wx:if="{{!haveImage}}" class="image-sending" src="{{imageSrc}}"></image>
+        </view>
+      </view>
+</view>
+<!-- Contain pic after take picture  -->
+
+<!--DESCRIPTION INPUT-->
+<view class="input">
   <form class="card" bindsubmit="bindFormSubmit">
     <view class="user-input card-content">
       <view class="text-area-wrap">
         <textarea style="input-size" placeholder="Description" class="input-height" name="Description" maxlength="-1" />
       </view>
     </view>
-    <button class="button" form-type="submit">Post Picture</button>
   </form>
 </view>
+<!--DESCRIPTION INPUT-->
 
-<button class="button" bindtap="goToIndex" form-type="submit">Back to index</button>
+</form>
+
+<!--UPLOAD-->
+
+<view class="upload">
+  <view class="btn-medium" bindtap="goAdd">UPLOAD PICTURE</view>
+</view>
+

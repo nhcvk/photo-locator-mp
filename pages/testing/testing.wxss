@@ -1,32 +1,20 @@
+/* pages/testing/testing.wxss */
 /* pages/add/add.wxss */
-
-/* LOCATION SHARING SWITCH */
-.public-container {
+.banner {
+  color: white;
+  text-align: center;
+  height: 50vh;
+  /* if you have a 70px navbar => height: calc(100vh - 70px); */
+  background-size: cover !important;
   display: flex;
-  justify-content: space-between;
+  align-items: center;
+  justify-content: center;
 }
-.flex-public-item1{
-  flex-grow: 1;
-  flex-shrink: 0;
+.title {
+  font-size: 30px;
+  font-weight: bold;
+  text-shadow: 0px 1px rgba(0, 0, 0, 0.2);
 }
-.flex-public-item2{
-  flex-grow: 0;
-  flex-shrink: 0;
-}
-.flex-public-item3{
-  flex-grow: 0;
-  flex-shrink: 0;
-}
-.change-scale {
-  transform: scale(0.6, 0.6);
-  padding-top: 3px;
-}
-.public-text {
-  color: #666666;
-  font-size: 12px;
-  padding-top: 10px;
-}
-
 
 /* BOTTOM UPLOAD BAR */
 .upload {

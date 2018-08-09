@@ -1,3 +1,4 @@
+<!--pages/favorites/favorites.wxml-->
 <!--index.wxml-->
 <!-- use code below as an example: 
 <block wx:for="{{items}}" wx:for-item ="photo">
@@ -7,13 +8,13 @@
 
 <!--TAB-->
 <view class="tabs">
-  <view class="tab active">
+  <view class="tab" bindtap="goIndex">
     <view class="tabHeader">FEED</view>
   </view>
   <view class="tab" bindtap="goUploads">
     <view class="tabHeader">UPLOADS</view>
   </view>
-  <view class="tab" bindtap="goFavorites">
+  <view class="tab active" bindtap="goFavorites">
     <view class="tabHeader">FAVOS</view>
   </view>
 </view>
@@ -24,7 +25,7 @@
 <view class="card">
     <view class="flex-wrp">
       <!-- BODY PART  -->
-      <image src="{{photo.image_url}}" class="flex-item-pic " style="linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('{{photo.image_url}}')" bindtap="showImage"></image>
+      <image src="{{photo.image_url}}" class="flex-item-pic " style="linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('{{photo.image_url}}')" bindtap="previewImage"></image>
       <!-- BODY PART  -->
     </view>
 </view>
