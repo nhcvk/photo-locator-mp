@@ -4,8 +4,7 @@
     "pages/photo/photo",
     "pages/add/add",
     "pages/uploads/uploads",
-    "pages/favorites/favorites",
-    "pages/testing/testing"
+    "pages/favorites/favorites"
   ],
   "window":{
     "backgroundTextStyle":"light",

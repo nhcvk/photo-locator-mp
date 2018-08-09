@@ -91,6 +91,44 @@ Page({
       })
     }
   },
-  
+  //SVENS CODE
+  data: {},
+  onLoad: function () {
+    let page = this
+    wx.getLocation({
+      type: 'gcj02',
+      success: function (res) {
+        var photoLocation = {
+          latitude: res.latitude,
+          longitude: res.longitude,
+          scale: 28
+        }
+        page.setData({ photoLocation })
+      }
+    })
+  },
+  addPhoto: function (box) {
+    let page = this
+    myRequest.post({
+      path: 'photos',
+      data: {
+        photo: {
+          image_url: "REPLACE WITH REAL URL",
+          description: box.detail.value.description,
+          longitude: page.data.photoLocation.longitude,
+          latitude: page.data.photoLocation.latitude
+          // user_id: FILL IN AFTER WE CAN DO LOGIN
+        }
+      },
+      success(res) {
+        console.log(res)
+      }
+    })
+  }, 
+  myToast: function () {
+    wx.showToast({
+      title: 'POSTED'
+    })
+  }
   
 })
