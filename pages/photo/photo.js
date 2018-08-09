@@ -5,21 +5,20 @@ const myRequest = require('../../lib/request');
 Page({
   data: {
     showLocation: false,
-    long: 106.870862,
-    lat: 29.456546,
-    sc:14
+    sc:16
   },
   onLoad: function (e) {
     let that = this
     wx.request({
       // url: `http://localhost:3000/photos/${e.id}` WORKS FOR DIRECTING INDEX, NOT FOR TEST,
-      url: `http://localhost:3000/photos/1`,
+      url: `http://localhost:3000/photos/10`,
       success: function(res) {
         console.log(res)
         that.setData({
           longitude: res.data.longitude, 
           latitude: res.data.latitude,
-          description: res.data.description
+          description: res.data.description, 
+          markers: [{latitude: res.data.latitude, longitude: res.data.longitude}]
         })
        }
     })
