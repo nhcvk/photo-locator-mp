@@ -29,13 +29,19 @@ Page({
     wx.reLaunch({
       url: '/pages/uploads/uploads'
     })
-},
+  },
 
   goFavorites: function (e) {
     wx.reLaunch({
       url: '/pages/favorites/favorites'
     })
-},
+  },
+
+  changeToPhoto: function (e) { 
+    wx.navigateTo({ 
+      url: `../photo/photo?id=${this.data.items[e.currentTarget.id].id}` 
+    }) 
+  },
 
   showImage: function (e) {
     wx.reLaunch({

@@ -1,1 +1,24 @@
 /* pages/photo/photo.wxss */
+map {
+  width:100%;
+  height:50vh;
+}
+/* BOTTOM UPLOAD BAR */
+.upload {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: rgb(0, 0, 0);
+  display: flex;
+  justify-content: center;
+  padding: 10px 10px 10px 10px;
+  flex-grow: 1;
+}
+.btn-medium {
+  color: #999999;
+  border: 1px solid #999999;
+  background-color: white;
+  padding: 10px 15px;
+  border-radius: 50px;
+  font-weight: lighter;
+}
