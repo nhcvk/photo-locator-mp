@@ -3,6 +3,12 @@ const app = getApp()
 const myRequest = require('../../lib/request');
 
 Page({
+  data: {
+    showLocation: false,
+    long: 106.870862,
+    lat: 29.456546,
+    sc:14
+  },
   onLoad: function (e) {
     let that = this
     wx.request({
@@ -18,7 +24,15 @@ Page({
        }
     })
   }, 
+
    onReady: function (e) {
     this.mapCtx = wx.createMapContext('map')
-  }
+  },
+
+
+  goAdd: function (e) {
+    wx.reLaunch({
+      url: '/pages/add/add'
+    })
+  },
 })
