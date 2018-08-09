@@ -1,2 +1,15 @@
 <!--pages/photo/photo.wxml-->
 <text>pages/photo/photo.wxml</text>
+            <view>{{description}}</view>
+            <view>{{latitude}}</view>
+
+<map    
+        id="map" 
+        style="width: 100%; height: 300px;"
+        latitude="{{latitude}}"
+        longitude="{{longitude}}"
+        markers="{{markers}}"
+        covers="{{covers}}"
+></map>
+
+
