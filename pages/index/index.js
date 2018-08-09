@@ -40,7 +40,7 @@ Page({
   changeToPhoto: function (e) { 
     wx.navigateTo({ 
       url: `../photo/photo?id=${this.data.items[e.currentTarget.id].id}` 
-    }) 
+    })
   },
 
   showImage: function (e) {

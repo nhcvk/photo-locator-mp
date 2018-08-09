@@ -10,8 +10,7 @@ Page({
   onLoad: function (e) {
     let that = this
     wx.request({
-      // url: `http://localhost:3000/photos/${e.id}` WORKS FOR DIRECTING INDEX, NOT FOR TEST,
-      url: `http://localhost:3000/photos/10`,
+      url: `http://localhost:3000/photos/${e.id}`,
       success: function(res) {
         console.log(res)
         that.setData({
