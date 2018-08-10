@@ -29,7 +29,7 @@
 <view class='flex-container-image' wx:if="{{is_sending || haveImage}}">
       <view class='flex-container-image'>
         <view class='image-center' >
-          <image wx:if="{{!haveImage}}" class="image-sending" src="{{imageSrc}}"></image>
+          <image wx:if="{{imageSrc}}" class="image-sending" src="{{imageSrc}}"></image>
         </view>
       </view>
 </view>
