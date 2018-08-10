@@ -1,26 +1,21 @@
 <!--pages/photo/photo.wxml-->
 
-<!--LOOP BLOCK FOR PICTURES FEED-->
-<block wx:for="{{items}}" wx:for-item="photo">
-<!--CARD FOR PICTURE-->
 <view class="card">
     <view class="flex-wrp">
-      <!-- BODY PART  -->
-      <image src="{{photo.image_url}}" class="flex-item-pic " style="linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('{{photo.image_url}}')" bindtap="showImage"></image>
-      <!-- BODY PART  -->
-    </view>
-</view>
-</block>
-            <view>{{description}}</view>
-            <view>{{latitude}}</view>
-    <view>{{longitude}}</view>
-<map    show-location="{{showLocation}}"
-        scale="{{sc}}"
-        latitude="{{latitude}}"
-        longitude="{{longitude}}"
-        markers="{{markers}}"
-></map>
+      <image 
+        src="{{image_url}}" 
+        class="flex-item-pic"
+        mode="aspectFill">
+      </image>
+      <view class="photo-description">{{description}}</view>
 
+      <map    show-location="{{showLocation}}"
+              scale="{{sc}}"
+              latitude="{{latitude}}"
+              longitude="{{longitude}}"
+              markers="{{markers}}"></map>
+  </view>
+</view>
 <!--UPLOAD-->
 
 <view class="upload">

@@ -14,6 +14,7 @@ Page({
       success: function(res) {
         console.log(res)
         that.setData({
+          image_url: res.data.image_url,
           longitude: res.data.longitude, 
           latitude: res.data.latitude,
           description: res.data.description, 
@@ -29,7 +30,7 @@ Page({
 
 
   goAdd: function (e) {
-    wx.reLaunch({
+    wx.navigateTo({
       url: '/pages/add/add'
     })
   },

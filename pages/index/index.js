@@ -20,7 +20,7 @@ Page({
   },
 
   goAdd: function (e) {
-    wx.reLaunch({
+    wx.navigateTo({
       url: '/pages/add/add'
     })
   },

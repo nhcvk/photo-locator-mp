@@ -23,7 +23,7 @@ Page({
   },
 
   goAdd: function (e) {
-    wx.reLaunch({
+    wx.navigateTo({
       url: '/pages/add/add'
     })
   },
@@ -43,6 +43,12 @@ Page({
   showImage: function (e) {
     wx.reLaunch({
       url: '/pages/photo/photo'
+    })
+  },
+
+  changeToPhoto: function (e) {
+    wx.navigateTo({
+      url: `../photo/photo?id=${this.data.items[e.currentTarget.id].id}`
     })
   },
 

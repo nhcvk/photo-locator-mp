@@ -50,6 +50,7 @@
 .flex-wrp {
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 .flex-item-pic {
   flex: 0 0 auto;
@@ -68,12 +69,12 @@
   flex-grow: 1;
 }
 .btn-medium {
-  color: #999999;
   border: 1px solid #999999;
   background-color: white;
   padding: 10px 15px;
   border-radius: 50px;
   font-weight: lighter;
+  margin: 10px;
 }
 
 

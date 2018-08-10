@@ -1,8 +1,5 @@
 <!--pages/add/add.wxml-->
 
-<!--BACK TO INDEX-->
-<button class="button" bindtap="goIndex" form-type="submit">Back to index</button>
-
 <form bindsubmit="addPhoto">
 
 <!-- Public switch  -->
