@@ -131,7 +131,10 @@ Page({
   myToast: function () {
     wx.showToast({
       title: 'POSTED'
-    })
+    }), 
+    setTimeout(function(){ wx.navigateTo({
+      url: "../index/index"
+    }) }, 1000);
   }
   
 })
