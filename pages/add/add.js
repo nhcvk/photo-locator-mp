@@ -1,6 +1,8 @@
 // pages/add/add.js
 const app = getApp()
 const myRequest = require('../../lib/request');
+const AV = require('../../utils/av-weapp-min.js');
+
 
 Page({
 
@@ -51,11 +53,10 @@ Page({
       that.data.is_take_photo = true
 
       wx.chooseImage({
-        count: 1, // Default 9
-        sizeType: ['compressed'], // Can specify whether it is the original or compressed image, both have defaults
-        sourceType: ['camera', 'album'], // Can specify whether the source is an album or camera, both have defaults
+        count: 1,
+        sizeType: ['compressed'],
+        sourceType: ['camera', 'album'],
         success: function (res) {
-          // Returns the local file path list for the selected photo, tempFilePath can be used as the img tag's src attribute to display the image
           var tempFilePath = res.tempFilePaths[0]
 
           console.log("Temp file path >>")
@@ -91,6 +92,8 @@ Page({
       })
     }
   },
+
+
   //SVENS CODE
   data: {},
   onLoad: function () {
@@ -113,7 +116,7 @@ Page({
       path: 'photos',
       data: {
         photo: {
-          image_url: "REPLACE WITH REAL URL",
+          image_url: this.data.imageUrl,
           description: box.detail.value.description,
           longitude: page.data.photoLocation.longitude,
           latitude: page.data.photoLocation.latitude

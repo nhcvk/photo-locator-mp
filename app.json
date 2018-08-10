@@ -1,15 +1,15 @@
 {
-  "pages":[
-    "pages/index/index", 
+  "pages": [
+    "pages/index/index",
     "pages/photo/photo",
     "pages/add/add",
     "pages/uploads/uploads",
     "pages/favorites/favorites"
   ],
-  "window":{
-    "backgroundTextStyle":"light",
+  "window": {
+    "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#000000",
     "navigationBarTitleText": "PhotoLocator",
-    "navigationBarTextStyle":"light"
+    "navigationBarTextStyle": "light"
   }
 }
